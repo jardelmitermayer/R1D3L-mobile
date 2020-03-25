@@ -17,9 +17,15 @@ export default function Login({navigation}) {
         </TouchableOpacity>
 
         <TouchableOpacity
-          
+          onPress={() => navigation.navigate('Login')}
           style={styles.posicaoBotao}>
           <Text style={styles.button}> Administrador</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+        onPress={() => navigation.navigate('Cadastro')}
+        style={styles.botaoCadastro}>
+          <Text style={{color:'blue',fontSize:18}}> Nova Conta</Text>
         </TouchableOpacity>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -52,6 +58,10 @@ const styles = StyleSheet.create({
     marginRight:50,    
     alignItems:'center',    
     justifyContent:'center',
+  },
+  botaoCadastro:{
+    marginTop: 50,
+
   }
  
 });

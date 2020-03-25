@@ -3,7 +3,9 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 import Inicio from './pages/Inicio';
 import Sala from './pages/Sala';
-import inserirPIN from './pages/inserirPIN';
+import inserirPIN from './pages/InserirPIN';
+import Login from './pages/Login';
+import Cadastro from './pages/Cadastro';
 
 const Routes = createAppContainer(
     createStackNavigator({
@@ -23,6 +25,18 @@ const Routes = createAppContainer(
             screen: inserirPIN,
             navigationOptions:{
                 title:'PIN'
+            },
+        },
+        Login:{
+            screen: Login,
+            navigationOptions:{
+                title:'Login'
+            },
+        },
+        Cadastro:{
+            screen: Cadastro,
+            navigationOptions:{
+                title:'Cadastro'
             },
         },
     },{

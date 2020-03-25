@@ -13,16 +13,20 @@ import {
 const {width, height} = Dimensions.get('window');
 import Input from '../components/Input';
 
-export default function inserirPIN (){
+export default function Login (){
     return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <Text style={styles.h1}> R1D3L</Text>
-                <TextInput style={styles.input} placeholder={'insira aqui o PIN da Sala'} />
+
+                <TextInput style={styles.input} placeholder={'Insira seu nome de usuário'} />
+                
+                <TextInput style={styles.input} placeholder={'Insira sua senha'} />
+                
                 <TouchableOpacity style={styles.posicaoBotao}>
                     <Text style={styles.button}> ENTER </Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
-  
+        
     );
 }
 const styles = StyleSheet.create({
