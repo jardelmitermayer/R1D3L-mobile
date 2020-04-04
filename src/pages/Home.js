@@ -11,8 +11,13 @@ import {
     SafeAreaView, Alert,
   } from 'react-native';
 
-function Sala (){
-    return <View />
+function Home (){
+    return (
+      <KeyboardAvoidingView>
+        <Text> HOME</Text>
+        
+      </KeyboardAvoidingView>
+    );
 }
 
-export default Sala;
+export default Home;

@@ -2,10 +2,13 @@ import { createAppContainer } from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import Inicio from './pages/Inicio';
-import Sala from './pages/Sala';
+import Home from './pages/Home';
 import inserirPIN from './pages/InserirPIN';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
+import CriarSala from './pages/CriarSala';
+import Questionario from './pages/Questionario';
+import Relatorios from './pages/Relatorios';
 
 const Routes = createAppContainer(
     createStackNavigator({
@@ -15,8 +18,8 @@ const Routes = createAppContainer(
                 title:'Seja bem-vindo'
             },
         },
-        Sala:{
-            screen: Sala,
+        Home:{
+            screen: Home,
             navigationOptions:{
                 title:'Crie sua Sala'
             },
@@ -37,6 +40,24 @@ const Routes = createAppContainer(
             screen: Cadastro,
             navigationOptions:{
                 title:'Cadastro'
+            },
+        },
+        CriarSala:{
+            screen: CriarSala,
+            navigationOptions:{
+                title:'Criar Sala'
+            },
+        },
+        Relatorios:{
+            screen: Relatorios,
+            navigationOptions:{
+                title:'Relatorios'
+            },
+        },
+        Questionario:{
+            screen: Questionario,
+            navigationOptions:{
+                title:'Questionario'
             },
         },
     },{

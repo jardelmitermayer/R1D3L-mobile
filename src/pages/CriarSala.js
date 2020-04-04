@@ -12,16 +12,19 @@ import {
   } from 'react-native';
 const {width, height} = Dimensions.get('window');
 import Input from '../components/Input';
-import { ScrollView } from 'react-native-gesture-handler';
 
 export default function Cadastro (){
     return (
-          <ScrollView>
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <Text style={styles.h1}> R1D3L</Text>
 
-                <TextInput style={styles.input} placeholder={'Insira seu nome de usuário'} />
-                <TextInput style={styles.input} placeholder={'Insira seu nome'} />
+                <TextInput style={styles.input} placeholder={'Insira o nome da sala'} />
+                <TextInput 
+                style={styles.input} 
+                multiline={true}
+                placeholder={'Insira uma descricao sobre a sala'}                
+                />
+                
                 <TextInput style={styles.input} placeholder={'Escreva uma breve biografia'} />
                 <TextInput style={styles.input} placeholder={'Insira sua profissão'} />                
                 <TextInput style={styles.input} placeholder={'Insira sua senha'} />
@@ -30,7 +33,7 @@ export default function Cadastro (){
                     <Text style={styles.button}> ENTER </Text>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
-            </ScrollView>
+        
     );
 }
 const styles = StyleSheet.create({
@@ -45,7 +48,7 @@ const styles = StyleSheet.create({
         marginBottom:60
     },
     input:{
-        height: 40,
+        minHeight:40,
         width: width - 140,
         borderWidth: 1,
         borderRadius: 10,
